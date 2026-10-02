@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
-  selector: 'app-navbar-component',
+  imports: [RouterLink],
+  selector: 'navbar-component',
   styleUrl: './navbar-component.css',
   templateUrl: './navbar-component.html',
 })
