@@ -3,6 +3,7 @@ import { HomeComponent } from './rick-morty-project/pages/home-component/home-co
 import { CharactersComponent } from './rick-morty-project/components/characters-component/characters-component';
 import { LocationsComponent } from './rick-morty-project/components/locations-component/locations-component';
 import { EpisodesComponent } from './rick-morty-project/components/episodes-component/episodes-component';
+import { CharacterDetailComponent } from './rick-morty-project/components/character-detail-component/character-detail-component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,10 @@ export const routes: Routes = [
             {
                 path:'characters',
                 component:CharactersComponent
+            },
+            {
+                path:'characters/:id',
+                component:CharacterDetailComponent
             },
             {
                 path:'locations',

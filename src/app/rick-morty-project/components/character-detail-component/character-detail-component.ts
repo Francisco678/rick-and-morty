@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './character-detail-component.css',
   templateUrl: './character-detail-component.html',
 })
-export class CharacterDetailComponent {}
+export class CharacterDetailComponent {
+
+
+
+
+}

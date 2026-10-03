@@ -1,4 +1,4 @@
-<div class="card-body">
+<div [routerLink]="['/rickandmorty/characters', this.inputCharacter().id]" class="card-body">
     <img class="characterImage" [src]="this.inputCharacter().image"/>
     <p>Id: {{this.inputCharacter().id}}</p>
     <p>Name: {{this.inputCharacter().name}}</p>
