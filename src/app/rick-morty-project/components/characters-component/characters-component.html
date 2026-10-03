@@ -1,6 +1,6 @@
 <div>
     @for (character of this.characters(); track character.id) {
-        <character-card/>
+        <character-card [inputCharacter]="character"/>
     }
 </div>
 

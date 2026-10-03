@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { CharacterResponse } from '../../interfaces/api-character-interfaces';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './character-card.css',
   templateUrl: './character-card.html',
 })
-export class CharacterCard {}
+export class CharacterCard {
+  inputCharacter = input.required<CharacterResponse>();
+}
