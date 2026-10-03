@@ -1,1 +1,6 @@
-<p>characters-component works!</p>
+<div>
+    @for (character of this.characters(); track character.id) {
+        <character-card/>
+    }
+</div>
+
