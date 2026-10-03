@@ -10,6 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 export class CharacterDetailComponent {
 
 
+  route = inject(ActivatedRoute);
+  id = this.route.snapshot.paramMap.get('id');
+
+
+  constructor(){
+    console.log(this.id)
+  }
 
 
 }
