@@ -1,13 +1,23 @@
 <div>
+    <h3>{{this.character()?.name}}</h3>
     <img [src]="this.character()?.image"/>
-    <p>name: {{this.character()?.name}}</p>
     <p>status: {{this.character()?.status}}</p>
     <P>species: {{this.character()?.species}}</P>
     <p>type: {{this.character()?.type ||"Unknown"}}</p>
     <p>gender: {{this.character()?.gender}}</p> 
     <P>origin: {{this.character()?.origin.name}}</P>
     <p>location: {{this.character()?.location.name}}</p>
-    <P>episode: {{this.character()?.episode}}</P>
+    <div>
+        <h4>Episodes</h4>
+        @for(episode of this.episodes(); track episode.id){
+            <div class="cardEpisode">
+                <p>name: {{episode.name}}</p>
+                <p>air date: {{episode.air_date}}</p>
+            </div>
+        }
+
+    </div>
+    
     <p>created: {{this.character()?.created}}</p>
 
 </div>
