@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
 import { CharacterResponse } from '../../interfaces/api-character-interfaces';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'character-card',
   styleUrl: './character-card.css',
   templateUrl: './character-card.html',
