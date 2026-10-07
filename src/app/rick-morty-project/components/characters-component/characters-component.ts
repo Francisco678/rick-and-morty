@@ -22,5 +22,14 @@ export class CharactersComponent {
   }
 
 
+  getCaharactersByPage(indicador:number){
+    this.service.getCaharactersByPage(indicador).subscribe(
+      response=>{
+        this.characters.set(response);
+      }
+    )
+  }
+
+
 
 }

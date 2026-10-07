@@ -1,4 +1,9 @@
 <div>
+    <div>
+        <button (click)="getCaharactersByPage(-1)"><</button>
+        <button (click)="getCaharactersByPage(1)">></button>
+    </div>
+    
     @for (character of this.characters(); track character.id) {
         <character-card [inputCharacter]="character"/>
     }
