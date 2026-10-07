@@ -3,6 +3,7 @@ import { inject, Injectable } from "@angular/core";
 import { map, Observable, tap } from "rxjs";
 import {  ApiCharacterResponse, CharacterResponse } from "../interfaces/api-character-interfaces";
 import { EpisodeResponse } from "../interfaces/api-episode-interfaces";
+import { ApiLocationResponse, LocationResponse } from "../interfaces/api-location-interfaces";
 
 
 @Injectable({providedIn:'root'})
@@ -59,6 +60,15 @@ export class ApiRickMortyService{
    
       
 
+     }
+
+
+     getLocations():Observable<LocationResponse[]>{
+      
+      return this.http.get<ApiLocationResponse>("https://rickandmortyapi.com/api/location")
+      .pipe(
+         map(apiResponse=>apiResponse.results)
+      )
      }
 
 }

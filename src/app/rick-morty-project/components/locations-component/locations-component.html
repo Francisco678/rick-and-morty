@@ -1,1 +1,12 @@
-<p>locations-component works!</p>
+<div>
+    @for (location of this.locations(); track location.id) {
+        <div>
+            <p>Id: {{location.id}}</p>
+            <p>Name: {{location.name}}</p>
+            <p>Residents: {{location.residents}}</p>
+            <p>Dimesion: {{location.dimension}}</p>
+            <p>Type: {{location.type}}</p>
+            <p>Created: {{location.created}}</p>
+        </div>
+    }
+</div>
