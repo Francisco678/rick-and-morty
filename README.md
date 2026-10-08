@@ -1,59 +1,102 @@
-# RickAndMortyExplorer
+# Rick and Morty Explorer 🚀
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+Aplicación web desarrollada con **Angular** para explorar información sobre personajes, ubicaciones y episodios del universo de *Rick and Morty*, utilizando la API pública [Rick and Morty API](https://rickandmortyapi.com/).
 
-## Development server
+Este proyecto fue creado como práctica de desarrollo frontend, con énfasis en **Angular Router**, consumo de APIs REST, componentes reutilizables, programación reactiva y control de versiones con Git y GitHub.
 
-To start a local development server, run:
+## ✨ Funcionalidades
 
-```bash
-ng serve
+- **Personajes:** consulta y visualización de personajes obtenidos desde la API.
+- **Paginación:** navegación entre páginas de resultados de personajes.
+- **Detalle de personajes:** sección con ruta dinámica `/rickandmorty/characters/:id`.
+- **Ubicaciones:** consulta de ubicaciones y visualización de los personajes residentes de cada una.
+- **Episodios:** consulta y visualización de información de episodios.
+- **Navegación:** rutas principales y rutas hijas mediante Angular Router.
+
+## 🛠️ Tecnologías
+
+- Angular y TypeScript
+- HTML y CSS
+- Angular Router
+- HttpClient
+- RxJS
+- Angular Signals
+- Git y GitHub
+
+## 🌐 API utilizada
+
+[Rick and Morty API](https://rickandmortyapi.com/documentation)
+
+Endpoints principales:
+
+```text
+GET https://rickandmortyapi.com/api/character
+GET https://rickandmortyapi.com/api/character/{id}
+GET https://rickandmortyapi.com/api/location
+GET https://rickandmortyapi.com/api/episode
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Para obtener los residentes de una ubicación, la aplicación procesa los identificadores presentes en las URLs de residentes y consulta sus datos en la API.
 
-## Code scaffolding
+## 🧭 Rutas de la aplicación
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Ruta | Descripción |
+| --- | --- |
+| `/` | Página de inicio |
+| `/rickandmorty/characters` | Listado de personajes |
+| `/rickandmorty/characters/:id` | Detalle de personaje |
+| `/rickandmorty/locations` | Ubicaciones y residentes |
+| `/rickandmorty/episodes` | Episodios |
 
-```bash
-ng generate component component-name
-```
+## ⚙️ Instalación y ejecución
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**Requisitos:** Node.js, npm y Angular CLI compatibles con la versión de Angular utilizada en el proyecto.
 
-```bash
-ng generate --help
-```
+1. Clona el repositorio:
 
-## Building
+   ```bash
+   git clone https://github.com/Francisco678/RickAndMortyExplorer.git
+   ```
 
-To build the project run:
+2. Entra al directorio:
 
-```bash
-ng build
-```
+   ```bash
+   cd RickAndMortyExplorer
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. Instala las dependencias:
 
-## Running unit tests
+   ```bash
+   npm install
+   ```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+4. Inicia el servidor de desarrollo:
 
-```bash
-ng test
-```
+   ```bash
+   npx ng serve
+   ```
 
-## Running end-to-end tests
+5. Abre `http://localhost:4200/` en tu navegador.
 
-For end-to-end (e2e) testing, run:
+## 📚 Aprendizajes del proyecto
 
-```bash
-ng e2e
-```
+- Organización de la interfaz mediante componentes standalone.
+- Configuración de rutas anidadas y rutas con parámetros.
+- Consumo de servicios REST con `HttpClient` y `Observable`.
+- Gestión del estado de la interfaz mediante Signals.
+- Transformación de respuestas de la API para adaptarlas a la vista.
+- Manejo de peticiones asíncronas y resultados vacíos.
+- Desarrollo por funcionalidades con ramas, commits y pull requests.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🚧 Estado del proyecto
 
-## Additional Resources
+Proyecto de aprendizaje en evolución. Algunas funcionalidades y mejoras pueden seguir en desarrollo.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👨‍💻 Autor
+
+**Francisco Reyes**  
+GitHub: [@Francisco678](https://github.com/Francisco678)
+
+## 📄 Créditos
+
+Los datos del universo de *Rick and Morty* son proporcionados por la [Rick and Morty API](https://rickandmortyapi.com/).
