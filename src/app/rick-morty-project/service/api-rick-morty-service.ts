@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { map, Observable, tap } from "rxjs";
 import { ApiCharacterResponse, CharacterResponse } from "../interfaces/api-character-interfaces";
-import { EpisodeResponse } from "../interfaces/api-episode-interfaces";
+import { ApiEpisodeResponse, EpisodeResponse } from "../interfaces/api-episode-interfaces";
 import { ApiLocationResponse, LocationResponse } from "../interfaces/api-location-interfaces";
 
 
@@ -80,11 +80,20 @@ export class ApiRickMortyService {
       y no un []
       */
       return this.http.get<CharacterResponse[] | CharacterResponse>
-      (`https://rickandmortyapi.com/api/character/${idsGetUsers.join(",")}`).pipe(
-         map(response=>
-            Array.isArray(response)?response:[response]
+         (`https://rickandmortyapi.com/api/character/${idsGetUsers.join(",")}`).pipe(
+            map(response =>
+               Array.isArray(response) ? response : [response]
+            )
          )
-      )
+   }
+
+
+   getEpisodes(): Observable<EpisodeResponse[]> {
+
+      return this.http.get<ApiEpisodeResponse>(`https://rickandmortyapi.com/api/episode`)
+         .pipe(
+            map(response => response.results)
+         )
    }
 
 }

@@ -1,1 +1,11 @@
-<p>episodes-component works!</p>
+<div>
+    @for (epi of this.episodes(); track epi.id) {
+    <div class="itemEpisode">
+        <p>Id: {{epi.id}}</p>
+        <p>Name: {{epi.name}}</p>
+        <p>Episode: {{epi.episode}}</p>
+        <p>Air date: {{epi.air_date}}</p>
+    </div>
+
+    }
+</div>
