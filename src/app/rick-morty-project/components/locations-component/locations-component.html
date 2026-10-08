@@ -3,10 +3,15 @@
         <div class="itemLocation">
             <p>Id: {{location.id}}</p>
             <p>Name: {{location.name}}</p>
-            <p>Residents: {{location.residents}}</p>
             <p>Dimesion: {{location.dimension}}</p>
             <p>Type: {{location.type}}</p>
-            <p>Created: {{location.created}}</p>
+            <div class="itemResidents">
+                @for (character of location.residents; track character.id) {
+                    <div>
+                        <p>resident name: {{character.name}}</p>
+                    </div>
+                }
+            </div>
         </div>
     }
 </div>

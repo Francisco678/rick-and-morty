@@ -71,4 +71,12 @@ export class ApiRickMortyService{
       )
      }
 
+
+     getCharactersByIds(idsGetUsers:string[]):Observable<CharacterResponse[]>{
+
+      
+      return this.http.get<CharacterResponse[]>(`https://rickandmortyapi.com/api/character/${idsGetUsers.join(",")}`);
+
+     }
+
 }

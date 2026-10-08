@@ -1,3 +1,5 @@
+import { CharacterResponse } from "./api-character-interfaces";
+
 export interface ApiLocationResponse {
     info:    Info;
     results: LocationResponse[];
@@ -18,4 +20,15 @@ export interface LocationResponse {
     residents: string[];
     url:       string;
     created:   Date;
+}
+
+export interface CustomLocationResponse{
+    id:        number;
+    name:      string;
+    type:      string;
+    dimension: string;
+    residents: CharacterResponse[];
+    url:       string;
+    created:   Date;
+
 }
